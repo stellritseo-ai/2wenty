@@ -37,7 +37,7 @@ export function Services() {
               className="group relative rounded-3xl glass p-6 shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-primary/40"
             >
               <div className="absolute inset-0 -z-10 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500"
-                style={{ background: "radial-gradient(60% 60% at 50% 0%, var(--primary) / 0.15, transparent 70%)" }} />
+                style={{ background: "radial-gradient(60% 60% at 50% 0%, color-mix(in oklab, var(--primary) 22%, transparent), transparent 70%)" }} />
               <div className="relative">
                 <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-primary/30 to-gold/20 border border-white/10 group-hover:from-primary/50 transition">
                   <Icon className="h-6 w-6 text-foreground" />
