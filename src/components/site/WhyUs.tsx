@@ -13,7 +13,7 @@ const items = [
 
 export function WhyUs() {
   return (
-    <section className="relative py-28 md:py-36">
+    <section className="relative py-[60px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">

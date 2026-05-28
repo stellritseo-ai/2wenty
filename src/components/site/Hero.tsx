@@ -18,8 +18,8 @@ export function Hero() {
           className="h-full w-full object-cover"
         />
         {/* Cinematic overlays for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/75 via-background/45 to-background/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
       </div>
 
       {/* aurora blobs + blueprint grid */}
@@ -31,7 +31,7 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs font-medium text-muted-foreground animate-fade-in">
+          <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs font-medium text-muted-foreground animate-fade-in mt-[100px]">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             Woman-Owned · Licensed &amp; Bonded · Ohio
           </div>

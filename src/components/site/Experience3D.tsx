@@ -3,7 +3,7 @@ import blueprint from "@/assets/blueprint.jpg";
 
 export function Experience3D() {
   return (
-    <section id="experience" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="experience" className="relative py-[60px] overflow-hidden">
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)/0.15,_transparent_60%)]" />
         <img src={blueprint} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-[0.06]" />
@@ -16,7 +16,7 @@ export function Experience3D() {
             <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-primary uppercase tracking-widest">
               Immersive Experience
             </div>
-            <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
+            <h2 className="mt-5 font-display text-[42px] font-bold leading-tight">
               See your home <span className="text-gradient-emerald">before it's built.</span>
             </h2>
             <p className="mt-5 text-muted-foreground text-lg">

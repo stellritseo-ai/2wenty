@@ -11,7 +11,7 @@ const info = [
 export function Contact() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="contact" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="contact" className="relative py-[60px] overflow-hidden">
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute -top-32 left-1/3 h-[420px] w-[420px] rounded-full bg-primary/15 blur-3xl animate-aurora" />
         <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-gold/15 blur-3xl animate-aurora" />

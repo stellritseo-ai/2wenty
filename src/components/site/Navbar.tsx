@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { href: "#about", label: "About" },
@@ -19,20 +20,22 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3" : "py-5"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav
-          className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-500 ${
-            scrolled ? "glass-strong shadow-elegant" : "bg-transparent"
-          }`}
+          className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-500 ${scrolled ? "glass-strong shadow-elegant" : "bg-transparent"
+            }`}
         >
           <a href="#top" className="flex items-center gap-3 group">
-            <span className="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-emerald shadow-[0_8px_24px_-8px_var(--primary)]">
-              <span className="text-sm font-bold text-primary-foreground font-display">22</span>
-              <span className="absolute -inset-1 rounded-2xl border border-gold/40 opacity-0 group-hover:opacity-100 transition" />
+            <span className="relative grid h-16 w-16 place-items-center rounded-full overflow-hidden shadow-[0_8px_24px_-8px_var(--primary)] bg-ink">
+              <img
+                src={logo}
+                alt="2wenty 2wo Logo"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <span className="absolute -inset-1 rounded-full border border-gold/40 opacity-0 group-hover:opacity-100 transition" />
             </span>
             <div className="hidden sm:block leading-tight">
               <div className="font-display font-bold tracking-tight">2wenty 2wo</div>
@@ -40,12 +43,12 @@ export function Navbar() {
             </div>
           </a>
 
-          <ul className="hidden md:flex items-center gap-1 text-sm">
+          <ul className="hidden md:flex items-center gap-1 text-sm font-medium">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="relative px-4 py-2 rounded-full text-muted-foreground hover:text-foreground transition-colors"
+                  className="relative px-4 py-2 rounded-full text-white hover:text-gold transition-colors"
                 >
                   {l.label}
                 </a>

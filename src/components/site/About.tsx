@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/about-owner.jpg";
+import aboutImg from "@/assets/about.jpg";
 import blueprint from "@/assets/blueprint.jpg";
 
 const focus = [
@@ -15,7 +15,7 @@ const helps = ["Families", "Single parents", "First-time homebuyers", "Community
 
 export function About() {
   return (
-    <section id="about" className="relative py-28 md:py-36">
+    <section id="about" className="relative py-[60px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative">
@@ -44,7 +44,7 @@ export function About() {
             <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">
               About the firm
             </div>
-            <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
+            <h2 className="mt-5 font-display text-[47px] font-bold leading-tight">
               Crafted with care. <br />
               <span className="text-gradient-emerald">Built to outlast generations.</span>
             </h2>

@@ -15,14 +15,14 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="services" className="relative py-[60px] overflow-hidden">
       <div aria-hidden className="absolute inset-0 -z-10 grid-blueprint opacity-30 mask-fade-b" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">
             Services
           </div>
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
+          <h2 className="mt-5 font-display text-[36px] font-bold leading-tight">
             End-to-end construction, <span className="text-gradient-gold">designed around you.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">

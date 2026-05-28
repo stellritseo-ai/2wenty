@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Linkedin } from "./icons";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -10,8 +11,12 @@ export function Footer() {
         <div className="grid lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-emerald">
-                <span className="text-sm font-bold text-primary-foreground font-display">22</span>
+              <span className="relative grid h-16 w-16 place-items-center rounded-full overflow-hidden shadow-[0_8px_24px_-8px_var(--primary)] bg-ink">
+                <img
+                  src={logo}
+                  alt="2wenty 2wo Logo"
+                  className="h-full w-full object-cover"
+                />
               </span>
               <div className="leading-tight">
                 <div className="font-display font-bold tracking-tight">2wenty 2wo Bricks &amp; Mortar LLC</div>
@@ -64,7 +69,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} 2wenty 2wo Bricks and Mortar LLC. All rights reserved.</div>
-          <div>Licensed &amp; Bonded · Ohio</div>
+          <div>Design By StellR IT</div>
         </div>
       </div>
     </footer>
