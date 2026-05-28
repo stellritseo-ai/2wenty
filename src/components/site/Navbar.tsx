@@ -38,7 +38,7 @@ export function Navbar() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-50">
         <nav
           className={`flex items-center justify-between rounded-2xl px-4 sm:px-6 py-3 transition-all duration-500 ${
             scrolled || menuOpen ? "glass-strong shadow-elegant" : "bg-transparent"
