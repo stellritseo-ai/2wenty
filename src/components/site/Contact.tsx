@@ -26,11 +26,11 @@ export function Contact() {
             <h2 className="mt-5 font-display text-3xl sm:text-5xl font-bold leading-tight">
               Let's break ground on <span className="text-gradient-emerald">your next chapter.</span>
             </h2>
-            <p className="mt-5 text-muted-foreground text-lg max-w-lg">
+            <p className="mt-5 text-muted-foreground text-base sm:text-lg max-w-lg">
               Tell us about your project. A member of our team will reach out within one business day.
             </p>
 
-            <div className="mt-10 space-y-3">
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               {info.map(({ Icon, label, value, href }) => (
                 <a
                   key={label}
@@ -42,7 +42,7 @@ export function Contact() {
                   </div>
                   <div className="min-w-0">
                     <div className="text-xs uppercase tracking-widest text-muted-foreground">{label}</div>
-                    <div className="font-display font-semibold truncate">{value}</div>
+                    <div className="font-display font-semibold truncate text-sm sm:text-base">{value}</div>
                   </div>
                 </a>
               ))}
@@ -54,7 +54,7 @@ export function Contact() {
               e.preventDefault();
               setSent(true);
             }}
-            className="glass-strong rounded-[2rem] p-6 sm:p-8 shadow-elegant"
+            className="glass-strong rounded-[2rem] p-6 sm:p-8 shadow-elegant w-full max-w-xl mx-auto lg:max-w-none"
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <Field label="Full name" name="name" placeholder="Senita Feagin" />
@@ -62,22 +62,29 @@ export function Contact() {
               <Field label="Email" name="email" type="email" placeholder="you@example.com" className="sm:col-span-2" />
               <div className="sm:col-span-2">
                 <label className="text-xs uppercase tracking-widest text-muted-foreground">Service interest</label>
-                <select
-                  className="mt-2 w-full rounded-xl glass px-4 py-3 text-sm bg-transparent focus:outline-none focus:border-primary/50"
-                  defaultValue=""
-                >
-                  <option value="" disabled className="bg-card">Select a service</option>
-                  {["New construction", "Renovation & remodeling", "Design + build", "Multi-family development", "Other"].map(s => (
-                    <option key={s} className="bg-card">{s}</option>
-                  ))}
-                </select>
+                <div className="relative mt-2">
+                  <select
+                    className="w-full rounded-xl glass px-4 py-3 text-base bg-transparent focus:outline-none focus:border-primary/50 appearance-none pr-10 cursor-pointer"
+                    defaultValue=""
+                  >
+                    <option value="" disabled className="bg-card text-foreground">Select a service</option>
+                    {["New construction", "Renovation & remodeling", "Design + build", "Multi-family development", "Other"].map(s => (
+                      <option key={s} className="bg-card text-foreground">{s}</option>
+                    ))}
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold">
+                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                    </svg>
+                  </div>
+                </div>
               </div>
               <div className="sm:col-span-2">
                 <label className="text-xs uppercase tracking-widest text-muted-foreground">Project details</label>
                 <textarea
                   rows={5}
                   placeholder="Tell us about your goals, timeline, and location..."
-                  className="mt-2 w-full rounded-xl glass px-4 py-3 text-sm bg-transparent focus:outline-none focus:border-primary/50 resize-none"
+                  className="mt-2 w-full rounded-xl glass px-4 py-3 text-base bg-transparent focus:outline-none focus:border-primary/50 resize-none"
                 />
               </div>
             </div>
@@ -108,7 +115,7 @@ function Field({
         name={name}
         type={type}
         placeholder={placeholder}
-        className="mt-2 w-full rounded-xl glass px-4 py-3 text-sm bg-transparent focus:outline-none focus:border-primary/50 placeholder:text-muted-foreground/60"
+        className="mt-2 w-full rounded-xl glass px-4 py-3 text-base bg-transparent focus:outline-none focus:border-primary/50 placeholder:text-muted-foreground/60"
       />
     </div>
   );
