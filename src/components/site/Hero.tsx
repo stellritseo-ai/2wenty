@@ -22,7 +22,7 @@ export function Hero() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <section id="top" className="relative isolate overflow-hidden min-h-screen flex items-center pt-28 md:pt-32">
+    <section id="top" className="relative isolate overflow-hidden min-h-screen flex items-center pt-24 pb-16 md:pt-32 md:pb-24">
       {/* Full background image slideshow */}
       <div aria-hidden className="absolute inset-0 -z-20 overflow-hidden bg-background">
         {backgroundImages.map((image, index) => {
@@ -52,14 +52,14 @@ export function Hero() {
         <div className="absolute inset-0 grid-blueprint opacity-20 mask-fade-b" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs font-medium text-muted-foreground animate-fade-in mt-[100px]">
+          <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1.5 text-xs font-medium text-muted-foreground animate-fade-in mt-6 md:mt-20">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             Woman-Owned · Licensed &amp; Bonded · Ohio
           </div>
 
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.02] tracking-tight animate-fade-up">
+          <h1 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] sm:leading-[1.02] tracking-tight animate-fade-up">
             Building Futures
             <span className="block">
               <span className="text-gradient-gold">Brick</span> by{" "}
@@ -67,7 +67,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground animate-fade-up delay-200">
+          <p className="mt-6 max-w-xl text-base sm:text-lg text-muted-foreground animate-fade-up delay-200">
             Luxury residential development, renovations, and design-build
             construction services for families, first-time homebuyers, and
             growing communities.

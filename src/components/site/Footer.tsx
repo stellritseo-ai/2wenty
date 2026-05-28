@@ -8,7 +8,7 @@ export function Footer() {
       <div aria-hidden className="absolute inset-0 grid-blueprint opacity-20 mask-fade-b" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 lg:gap-12">
           <div>
             <div className="flex items-center gap-3">
               <span className="relative grid h-16 w-16 place-items-center rounded-full overflow-hidden shadow-[0_8px_24px_-8px_var(--primary)] bg-ink">
@@ -59,7 +59,7 @@ export function Footer() {
             <div className="text-xs uppercase tracking-widest text-gold">Contact</div>
             <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
               <li><a href="tel:+16143592049" className="hover:text-foreground">(614) 359-2049</a></li>
-              <li className="break-all"><a href="mailto:2wenty2wobricksandmortar@gmail.com" className="hover:text-foreground">2wenty2wobricksandmortar@gmail.com</a></li>
+              <li className="break-all"><a href="mailto:2wenty2wobricksandmortar@gmail.com" className="hover:text-foreground break-all">2wenty2wobricksandmortar@gmail.com</a></li>
               <li>Columbus &amp; Mansfield, OH</li>
               <li>Mon – Sat · 8:30 AM – 6:00 PM</li>
               <li className="text-gold">24/7 Emergency Services</li>

@@ -27,13 +27,13 @@ export function About() {
                 width={1200}
                 height={1400}
                 loading="lazy"
-                className="w-full h-[520px] object-cover"
+                className="w-full h-[320px] sm:h-[450px] lg:h-[520px] object-cover"
               />
             </div>
             <div className="absolute -bottom-8 -right-4 sm:-right-10 w-56 h-56 rounded-2xl overflow-hidden glass-strong shadow-card rotate-[6deg] hidden sm:block animate-float-slow">
               <img src={blueprint} alt="Architectural blueprint" loading="lazy" className="h-full w-full object-cover opacity-90" />
             </div>
-            <div className="absolute -top-6 -left-4 sm:-left-8 glass-strong rounded-2xl px-5 py-4 shadow-card animate-float">
+            <div className="absolute -top-6 left-2 sm:-left-8 glass-strong rounded-2xl px-5 py-4 shadow-card animate-float">
               <div className="text-xs uppercase tracking-widest text-gold">Founder</div>
               <div className="font-display text-lg font-semibold">Senita Feagin</div>
               <div className="text-xs text-muted-foreground">Woman-Owned · Ohio</div>
@@ -44,7 +44,7 @@ export function About() {
             <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">
               About the firm
             </div>
-            <h2 className="mt-5 font-display text-[47px] font-bold leading-tight">
+            <h2 className="mt-5 font-display text-3xl sm:text-[47px] font-bold leading-tight">
               Crafted with care. <br />
               <span className="text-gradient-emerald">Built to outlast generations.</span>
             </h2>

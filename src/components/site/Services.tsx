@@ -22,7 +22,7 @@ export function Services() {
           <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">
             Services
           </div>
-          <h2 className="mt-5 font-display text-[36px] font-bold leading-tight">
+          <h2 className="mt-5 font-display text-2xl sm:text-[36px] font-bold leading-tight">
             End-to-end construction, <span className="text-gradient-gold">designed around you.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">

@@ -23,7 +23,7 @@ export function Contact() {
             <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-gold uppercase tracking-widest">
               Get in Touch
             </div>
-            <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold leading-tight">
+            <h2 className="mt-5 font-display text-3xl sm:text-5xl font-bold leading-tight">
               Let's break ground on <span className="text-gradient-emerald">your next chapter.</span>
             </h2>
             <p className="mt-5 text-muted-foreground text-lg max-w-lg">

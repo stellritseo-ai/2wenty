@@ -22,21 +22,21 @@ export function Projects() {
             <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs font-medium text-primary uppercase tracking-widest">
               Selected Work
             </div>
-            <h2 className="mt-5 font-display text-[46px] font-bold leading-tight">
+            <h2 className="mt-5 font-display text-3xl sm:text-[46px] font-bold leading-tight">
               A portfolio of homes <span className="text-gradient-emerald">that endure.</span>
             </h2>
           </div>
-          <p className="text-muted-foreground max-w-md">
+          <p className="text-muted-foreground max-w-md text-base sm:text-lg">
             From transformative renovations to ground-up developments, every project is a study in detail and patience.
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 grid-rows-[repeat(2,minmax(260px,1fr))] gap-4 md:gap-5">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 grid-rows-none md:grid-rows-[repeat(2,minmax(260px,1fr))] gap-4 md:gap-5">
           {items.map((it) => (
             <figure
               key={it.title}
               onClick={() => setActiveProject(it)}
-              className={`group relative overflow-hidden rounded-3xl shadow-elegant cursor-zoom-in ${it.span}`}
+              className={`group relative overflow-hidden rounded-3xl shadow-elegant cursor-zoom-in aspect-[16/10] md:aspect-auto ${it.span}`}
             >
               <img
                 src={it.src}
@@ -46,12 +46,12 @@ export function Projects() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/30 to-transparent" />
               <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-3xl" />
-              <figcaption className="absolute inset-x-0 bottom-0 p-6 z-10">
-                <div className="inline-flex items-center gap-1 rounded-full glass-strong px-2.5 py-1 text-[10px] uppercase tracking-widest text-gold">
+              <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-10">
+                <div className="inline-flex items-center gap-1 rounded-full glass-strong px-2.5 py-1 text-[10px] uppercase tracking-widest text-gold font-medium">
                   {it.tag}
                 </div>
-                <div className="mt-3 font-display text-xl font-semibold">{it.title}</div>
-                <div className="text-sm text-muted-foreground">{it.meta}</div>
+                <div className="mt-3 font-display text-lg sm:text-xl font-semibold">{it.title}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">{it.meta}</div>
               </figcaption>
               <div className="absolute top-4 right-4 grid h-10 w-10 place-items-center rounded-full glass-strong opacity-0 group-hover:opacity-100 transition duration-500 translate-y-2 group-hover:translate-y-0">
                 <span className="text-gold">→</span>
@@ -64,12 +64,12 @@ export function Projects() {
       {/* Lightbox / Zoom Modal */}
       {activeProject && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-fade-in cursor-zoom-out"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md p-4 sm:p-6 animate-fade-in cursor-zoom-out"
           onClick={() => setActiveProject(null)}
         >
           <button
             onClick={() => setActiveProject(null)}
-            className="absolute top-6 right-6 z-50 p-3 rounded-full bg-ink/60 text-white/80 hover:text-gold border border-white/10 hover:border-gold/30 hover:bg-ink transition duration-300 cursor-pointer"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 p-3 rounded-full bg-ink/75 text-white/80 hover:text-gold border border-white/10 hover:border-gold/30 hover:bg-ink transition duration-300 cursor-pointer"
             aria-label="Close modal"
           >
             <svg
@@ -89,22 +89,22 @@ export function Projects() {
           </button>
 
           <div
-            className="relative max-w-full max-h-[85vh] md:max-w-4xl rounded-3xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] animate-scale-in cursor-default"
+            className="relative max-w-full max-h-[70vh] sm:max-h-[85vh] md:max-w-4xl rounded-3xl overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] animate-scale-in cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={activeProject.src}
               alt={activeProject.title}
-              className="w-full h-auto max-h-[85vh] object-contain rounded-3xl"
+              className="w-full h-auto max-h-[70vh] sm:max-h-[85vh] object-contain rounded-3xl"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent p-6 sm:p-8">
-              <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 border border-gold/30 px-3 py-1 text-[10px] uppercase tracking-widest text-gold font-semibold">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent p-4 sm:p-8">
+              <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 border border-gold/30 px-2.5 py-1 text-[9px] sm:text-[10px] uppercase tracking-widest text-gold font-semibold">
                 {activeProject.tag}
               </span>
-              <h3 className="mt-3 font-display text-2xl sm:text-3xl font-bold text-white">
+              <h3 className="mt-2 sm:mt-3 font-display text-xl sm:text-3xl font-bold text-white leading-tight">
                 {activeProject.title}
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground mt-1">
+              <p className="text-xs sm:text-base text-muted-foreground mt-1">
                 {activeProject.meta}
               </p>
             </div>
