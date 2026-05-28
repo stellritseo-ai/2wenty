@@ -1,4 +1,9 @@
+import { useState, useEffect } from "react";
 import heroHouse from "@/assets/hero-house.jpg";
+import heroHouse2 from "@/assets/project-1.jpg";
+import heroHouse3 from "@/assets/project-3.jpg";
+
+const backgroundImages = [heroHouse, heroHouse2, heroHouse3];
 
 const stats = [
   { k: "Licensed & Bonded", v: "Contractors" },
@@ -8,15 +13,33 @@ const stats = [
 ];
 
 export function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section id="top" className="relative isolate overflow-hidden min-h-screen flex items-center pt-28 md:pt-32">
-      {/* Full background image */}
-      <div aria-hidden className="absolute inset-0 -z-20">
-        <img
-          src={heroHouse}
-          alt=""
-          className="h-full w-full object-cover"
-        />
+      {/* Full background image slideshow */}
+      <div aria-hidden className="absolute inset-0 -z-20 overflow-hidden bg-background">
+        {backgroundImages.map((image, index) => {
+          const isActive = index === currentIndex;
+          return (
+            <img
+              key={image}
+              src={image}
+              alt=""
+              className={`absolute inset-0 h-full w-full object-cover transition-all ease-out ${
+                isActive 
+                  ? "opacity-100 scale-105 duration-[6000ms]" 
+                  : "opacity-0 scale-100 duration-1000"
+              }`}
+            />
+          );
+        })}
         {/* Cinematic overlays for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-background/75 via-background/45 to-background/15" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
@@ -66,7 +89,23 @@ export function Hero() {
             </a>
           </div>
 
-          <dl className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fade-up delay-500">
+          {/* Slideshow Indicators */}
+          <div className="mt-10 flex gap-2 items-center animate-fade-up delay-400">
+            {backgroundImages.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-1.5 cursor-pointer rounded-full transition-all duration-500 ${
+                  idx === currentIndex 
+                    ? "w-8 bg-gradient-to-r from-primary to-emerald shadow-[0_0_8px_var(--primary)]" 
+                    : "w-2 bg-foreground/20 hover:bg-foreground/40"
+                }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              />
+            ))}
+          </div>
+
+          <dl className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fade-up delay-500">
             {stats.map((s) => (
               <div
                 key={s.k}

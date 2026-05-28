@@ -43,7 +43,7 @@ export function Navbar() {
             </div>
           </a>
 
-          <ul className="hidden md:flex items-center gap-1 text-sm font-medium">
+          <ul className="hidden md:flex items-center gap-2 text-base font-medium">
             {links.map((l) => (
               <li key={l.href}>
                 <a
